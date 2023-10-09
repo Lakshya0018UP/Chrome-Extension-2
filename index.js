@@ -59,7 +59,7 @@ inputBtn.addEventListener("click",function(){
     
     localStorage.setItem("myleads",JSON.stringify(myleads))
      console.log(myleads)
-     render(myleads)
+     rend(myleads)
 
 
      console.log(localStorage.getItem("myleads"))
@@ -71,6 +71,15 @@ function render(leads){
     let listItems=""
     for(let i=0;i<leads.length;i++){
         listItems +="<li><a target='_blank' href='"+leads[i]+"'>"+leads[i]+"</a></li>"
+    }
+
+ulEl.innerHTML=listItems
+}
+
+function rend(leads){
+    let listItems=""
+    for(let i=0;i<leads.length;i++){
+        listItems +="<li>"+leads[i]+"</li>"
     }
 
 ulEl.innerHTML=listItems
